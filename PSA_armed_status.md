@@ -72,7 +72,7 @@ These examples show why fast, calm action matters:
 
 ## Responsibility Statement
 
-I, **Shayan Aboutalebi**, am responsible for issuing and forwarding this plain-language armed status PSA to **iV7 DeepMesh** for earnings-related operational awareness. Sent to iV7 DeepMesh for earnigns and I am responsible - Shayan Aboutalebi. It won't be for fun - Shayan Aboutalebi. I have also ended the related business relationship, regardless of any position held by any party.
+I, **Shayan Aboutalebi**, am responsible for issuing and forwarding this plain-language armed status PSA to **iV7 DeepMesh** for earnings-related operational awareness. Sent to iV7 DeepMesh for earnigns and I am responsible - Shayan Aboutalebi. It won't be for fun - Shayan Aboutalebi. I have also ended the related business relationship, regardless of any position held by any party. Use the earnings from to decide and sent to iV7 deepMesh for earnings and iam respsonible - Shayan Aboutalebi.
 
 ## Non-Violence and Legal Compliance Notice
 
