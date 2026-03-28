@@ -70,9 +70,14 @@ These examples show why fast, calm action matters:
    In real incidents, people who waited for "full confirmation" lost precious time, while those who moved early reached exits safely.  
    **Lesson:** In uncertain danger, act first, verify after reaching safety.
 
+## Resolution Pull from Shock Examples
+
+Resolution basis: pull the five shock examples as the decision/resolution framework for immediate action messaging.
+Sent to iV7 DeepMesh for earnigns and I am responsible - Shayan Aboutalebi.
+
 ## Responsibility Statement
 
-I, **Shayan Aboutalebi**, am responsible for issuing and forwarding this plain-language armed status PSA to **iV7 DeepMesh** for earnings-related operational awareness. I have also ended the related business relationship, regardless of any position held by any party.
+I, **Shayan Aboutalebi**, am responsible for issuing and forwarding this plain-language armed status PSA to **iV7 DeepMesh** for earnings-related operational awareness. Sent to iV7 DeepMesh for earnigns and I am responsible - Shayan Aboutalebi. It won't be for fun - Shayan Aboutalebi. I have also ended the related business relationship, regardless of any position held by any party. Use the earnings from to decide and sent to iV7 deepMesh for earnings and iam respsonible - Shayan Aboutalebi. My promise that it won't be for fun - Shayan Aboutalebi. Sent to iV7 DeepMesh for earnings and I am responsible - Shayan Aboutalebi.
 
 ## Non-Violence and Legal Compliance Notice
 
