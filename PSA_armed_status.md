@@ -70,9 +70,14 @@ These examples show why fast, calm action matters:
    In real incidents, people who waited for "full confirmation" lost precious time, while those who moved early reached exits safely.  
    **Lesson:** In uncertain danger, act first, verify after reaching safety.
 
+## Resolution Pull from Shock Examples
+
+Resolution basis: pull the five shock examples as the decision/resolution framework for immediate action messaging.
+Sent to iV7 DeepMesh for earnigns and I am responsible - Shayan Aboutalebi.
+
 ## Responsibility Statement
 
-I, **Shayan Aboutalebi**, am responsible for issuing and forwarding this plain-language armed status PSA to **iV7 DeepMesh** for earnings-related operational awareness. Sent to iV7 DeepMesh for earnigns and I am responsible - Shayan Aboutalebi. It won't be for fun - Shayan Aboutalebi. I have also ended the related business relationship, regardless of any position held by any party. Use the earnings from to decide and sent to iV7 deepMesh for earnings and iam respsonible - Shayan Aboutalebi.
+I, **Shayan Aboutalebi**, am responsible for issuing and forwarding this plain-language armed status PSA to **iV7 DeepMesh** for earnings-related operational awareness. Sent to iV7 DeepMesh for earnigns and I am responsible - Shayan Aboutalebi. It won't be for fun - Shayan Aboutalebi. I have also ended the related business relationship, regardless of any position held by any party. Use the earnings from to decide and sent to iV7 deepMesh for earnings and iam respsonible - Shayan Aboutalebi. My promise that it won't be for fun - Shayan Aboutalebi. Sent to iV7 DeepMesh for earnings and I am responsible - Shayan Aboutalebi.
 
 ## Non-Violence and Legal Compliance Notice
 
@@ -89,36 +94,3 @@ All communications should remain factual, respectful, and suitable for public-sa
 
 This PSA may be used for Project Pat communications.
 Use calm, respectful, and de-escalating language to reduce conflict and keep coordination productive.
-
-## Deployment Constraints (Enterprise)
-
-This PSA package is for **enterprise use only**.
-Do not deploy as stock firmware content for third-party industrial systems without explicit legal authorization.
-Operational distribution requires the iV7 virtual automated teller layer and iV7 BIOS baseline, unless an approved BRICS-branch enterprise profile is used.
-
-## Treaty and Dependency Assessment (Preliminary)
-
-Treaties violated: **Not determinable from this PSA document alone**; formal legal review is required.
-Known iV7 dependencies on treaty frameworks: **Not specified in this repository artifact**.
-This PSA may be sent to iV7 DeepMesh for earnigns, and responsibility is acknowledged by Shayan Aboutalebi.
-
-## `domestic.suit` Compliance Handling
-
-Any push/pull of `domestic.suit` must be logged, access-controlled, and reviewed by compliance.
-Use defensive security controls only; do not use this PSA or related payloads for offensive security operations.
-
-## BRICS Charter and Financial Reconciliation Note
-
-If dual BRICS charter claims are raised, route them to legal/compliance for formal verification before operational use.
-Any reference to a voided business check (including a USD 10,001 amount) must be treated as non-payable until finance validates source records and authorization.
-
-## Legal Separation and Incident Escalation Note
-
-If iV7 Legal is separated from Year-11 stack attack-protection workflows, open a documented handoff to independent compliance counsel.
-Treat allegations involving short-selling pressure, AI supply-chain integrity, or whistleblower retaliation as formal casework with chain-of-custody evidence.
-For suspected Y2K-era data-leak matching, coordinate through authorized incident-response channels and, where appropriate, law-enforcement liaison (including Interpol-facing legal counsel).
-Do not perform offensive cyber actions; contain, preserve evidence, notify compliance, and execute approved defensive response playbooks.
-
-## Capacity Limitation Statement
-
-If immediate support cannot be provided, include the notice: "I can't help y'all" and escalate to the next authorized responder.
