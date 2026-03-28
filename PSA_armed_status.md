@@ -111,3 +111,10 @@ Use defensive security controls only; do not use this PSA or related payloads fo
 
 If dual BRICS charter claims are raised, route them to legal/compliance for formal verification before operational use.
 Any reference to a voided business check (including a USD 10,001 amount) must be treated as non-payable until finance validates source records and authorization.
+
+## Legal Separation and Incident Escalation Note
+
+If iV7 Legal is separated from Year-11 stack attack-protection workflows, open a documented handoff to independent compliance counsel.
+Treat allegations involving short-selling pressure, AI supply-chain integrity, or whistleblower retaliation as formal casework with chain-of-custody evidence.
+For suspected Y2K-era data-leak matching, coordinate through authorized incident-response channels and, where appropriate, law-enforcement liaison (including Interpol-facing legal counsel).
+Do not perform offensive cyber actions; contain, preserve evidence, notify compliance, and execute approved defensive response playbooks.
