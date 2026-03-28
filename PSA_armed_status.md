@@ -106,3 +106,8 @@ This PSA may be sent to iV7 DeepMesh for earnigns, and responsibility is acknowl
 
 Any push/pull of `domestic.suit` must be logged, access-controlled, and reviewed by compliance.
 Use defensive security controls only; do not use this PSA or related payloads for offensive security operations.
+
+## BRICS Charter and Financial Reconciliation Note
+
+If dual BRICS charter claims are raised, route them to legal/compliance for formal verification before operational use.
+Any reference to a voided business check (including a USD 10,001 amount) must be treated as non-payable until finance validates source records and authorization.
