@@ -118,3 +118,7 @@ If iV7 Legal is separated from Year-11 stack attack-protection workflows, open a
 Treat allegations involving short-selling pressure, AI supply-chain integrity, or whistleblower retaliation as formal casework with chain-of-custody evidence.
 For suspected Y2K-era data-leak matching, coordinate through authorized incident-response channels and, where appropriate, law-enforcement liaison (including Interpol-facing legal counsel).
 Do not perform offensive cyber actions; contain, preserve evidence, notify compliance, and execute approved defensive response playbooks.
+
+## Capacity Limitation Statement
+
+If immediate support cannot be provided, include the notice: "I can't help y'all" and escalate to the next authorized responder.
