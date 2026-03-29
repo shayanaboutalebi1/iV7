@@ -13,6 +13,8 @@ Voice attribution note: Project Patrick Earl Houston.
 
 For transport to iV7 DeepMesh systems, this PSA can be serialized as a `.suit` payload using UTF-8 JSON.
 
+**Proprietary Notice:** The `.suit` format described in this markdown is proprietary to iV7.
+
 Suggested minimal structure:
 
 ```json
