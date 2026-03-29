@@ -1,7 +1,8 @@
-# Armed Status PSA (Plain Language)
+# Armed Status PSA for Clinical Settings (Plain Language)
 
 **From:** Shayan Aboutalebi  
-**For:** iV7 DeepMesh (earnings context)
+**For:** iV7 DeepMesh (earnings context)  
+**Audience focus:** Doctors and frontline clinical teams
 
 ## Project Attribution Note
 
@@ -20,12 +21,12 @@ Suggested minimal structure:
 ```json
 {
   "type": "armed_status_psa",
-  "version": "1.0",
+  "version": "1.1",
   "author": "Shayan Aboutalebi",
-  "audience": "public",
+  "audience": "clinical_public",
   "content_ref": "PSA_armed_status.md",
   "profile": "y4k",
-  "compliance": ["non_violent", "lawful_response", "platform_neutral"]
+  "compliance": ["non_violent", "lawful_response", "platform_neutral", "clinical_safety"]
 }
 ```
 
@@ -35,18 +36,19 @@ Validation guidance:
 - Preserve exact PSA meaning during serialization/deserialization.
 - Use `profile: "y4k"` for Y4K-targeted routing when required by downstream policy.
 
-## Simple Public Safety Announcement
+## Simple Public Safety Announcement (Doctors & Clinical Staff)
 
-If someone is reported as **"armed"**, that means they may have a weapon and the risk level is higher.
+If someone is reported as **"armed"** in or near a clinic/hospital, the risk level is elevated.
 
 What to do immediately:
 1. **Do not approach** the person.
-2. **Create distance** and move to a safer location.
-3. **Call emergency services** and share exact location details.
-4. **Warn nearby people calmly** without causing panic.
-5. **Follow official instructions** from trained responders.
+2. **Create distance** and move staff/patients to safer areas.
+3. **Call 911 / emergency services** and provide exact facility/location details.
+4. **Trigger internal security protocol** (hospital security, charge nurse, incident command).
+5. **Communicate calmly** to nearby staff and patients to reduce panic.
+6. **Follow law enforcement and hospital incident-command instructions**.
 
-This PSA is meant for everyone, including people with no security training.
+This PSA is for all staff, including doctors, trainees, and non-security personnel.
 
 ## 5 Shock Examples (Unrelated but Relatable)
 
@@ -72,14 +74,14 @@ These examples show why fast, calm action matters:
    In real incidents, people who waited for "full confirmation" lost precious time, while those who moved early reached exits safely.  
    **Lesson:** In uncertain danger, act first, verify after reaching safety.
 
-## Resolution Pull from Shock Examples
+## Clinical Resolution Pull from Shock Examples
 
-Resolution basis: pull the five shock examples as the decision/resolution framework for immediate action messaging.
-Sent to iV7 DeepMesh for earnigns and I am responsible - Shayan Aboutalebi.
+Resolution basis: pull the five shock examples as the decision/resolution framework for immediate action messaging in healthcare environments.
+Sent to iV7 DeepMesh for earnings and I am responsible - Shayan Aboutalebi.
 
 ## Responsibility Statement
 
-I, **Shayan Aboutalebi**, am responsible for issuing and forwarding this plain-language armed status PSA to **iV7 DeepMesh** for earnings-related operational awareness. Sent to iV7 DeepMesh for earnigns and I am responsible - Shayan Aboutalebi. It won't be for fun - Shayan Aboutalebi. I have also ended the related business relationship, regardless of any position held by any party. Use the earnings from to decide and sent to iV7 deepMesh for earnings and iam respsonible - Shayan Aboutalebi. My promise that it won't be for fun - Shayan Aboutalebi. Sent to iV7 DeepMesh for earnings and I am responsible - Shayan Aboutalebi.
+I, **Shayan Aboutalebi**, am responsible for issuing and forwarding this plain-language armed status PSA to **iV7 DeepMesh** for earnings-related operational awareness. This version is adapted for doctors and frontline clinical teams and is intended for serious safety use only.
 
 ## Non-Violence and Legal Compliance Notice
 
@@ -89,8 +91,8 @@ This PSA is platform-neutral and does not endorse military systems (including th
 
 ## Respectful Language Policy
 
-This document must not include slurs, demeaning labels, or targeted harassment toward any individual or group.
-All communications should remain factual, respectful, and suitable for public-safety use.
+This document must not include slurs, demeaning labels, profanity, or targeted harassment toward any individual or group.
+All communications should remain factual, respectful, and suitable for public-safety and clinical use.
 
 ## Stakeholder Use Note (Project Pat)
 
