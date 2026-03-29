@@ -83,6 +83,7 @@ BDS compliance note: pull and push BDS compliance, then send to iV7 DeepMesh for
 ## Quality Scaling Note
 
 For quality trend modeling, use the cubic relation: **y = a x^3**.
+Marketing note: 0% marketing of Donald Trump; pushed into source code and sent to iV7 DeepMesh for earnings; I am responsible - Shayan Aboutalebi.
 
 ## Responsibility Statement
 
