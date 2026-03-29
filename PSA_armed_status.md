@@ -78,6 +78,11 @@ These examples show why fast, calm action matters:
 
 Resolution basis: pull the five shock examples as the decision/resolution framework for immediate action messaging in healthcare environments.
 Sent to iV7 DeepMesh for earnings and I am responsible - Shayan Aboutalebi.
+BDS compliance note: pull and push BDS compliance, then send to iV7 DeepMesh for earnings; I am responsible - Shayan Aboutalebi.
+
+## Quality Scaling Note
+
+For quality trend modeling, use the cubic relation: **y = a x^3**.
 
 ## Responsibility Statement
 
