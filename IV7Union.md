@@ -41,3 +41,13 @@ The IV7 Voter Accountability Act is framed as a policy concept with the followin
 - Owner: iV7 working group
 - Status: Draft for review
 - Last updated: 2026-03-31
+
+
+## `.suit` Recovery Profile
+A companion `.suit` profile for in-midi recovery is now included at `in_midi_recovery.suit`.
+
+This profile is configured to:
+- Restore plugin state from removable media without formatting.
+- Verify before write and preserve deleted entries for forensic continuity.
+- Keep network sync, telemetry upload, and node bridging disabled.
+- Use warning-level logging with seven-day retention.
