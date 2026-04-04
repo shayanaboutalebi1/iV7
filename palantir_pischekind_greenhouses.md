@@ -51,3 +51,30 @@ Your note about trying to carry social-work responsibility in connection with Ro
 
 In this framework, media references are only useful if they support de-escalation, clarity, and lawful safety outcomes.
 
+## Operational history request (as of 2026-04-04)
+### 1) Full list of failed attempts on iV7 Automated
+No authoritative failed-attempt log is present in this repository at this time.
+
+To produce a true full list, collect from:
+- deployment/event logs,
+- incident tickets,
+- rollback records,
+- access-control audit trails.
+
+### 2) What made it turn iV7
+Current documentation does not contain a single confirmed root-cause statement for the transition to iV7.
+
+Working categories to validate:
+- architecture migration decision,
+- governance/safety control requirements,
+- operational reliability thresholds,
+- ownership or program rebranding.
+
+### 3) When it released
+A confirmed release date for "iV7 Automated" is not documented in this repository.
+
+Release verification should include:
+- first production deployment timestamp (UTC),
+- first stable version tag,
+- release approval artifact/change ticket ID.
+
