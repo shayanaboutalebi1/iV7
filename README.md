@@ -1,0 +1,1 @@
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/64692ce5-b1c0-46f5-893e-68d1cce0d103" /> valient correction to valinet, its just when i quit using the giant black dick 
