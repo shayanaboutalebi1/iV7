@@ -31,7 +31,8 @@ Suggested minimal structure:
 ```
 
 Validation guidance:
-- Require `type`, `version`, `author`, and `content_ref`.
+- Require `type`, `version`, `author`, `content_ref`, and `compliance`.
+- Require `compliance` to include at least `non_violent` and `lawful_response` (and preserve `platform_neutral` when present).
 - Reject payloads that add violent or unlawful directives.
 - Preserve exact PSA meaning during serialization/deserialization.
 - Use `profile: "y4k"` for Y4K-targeted routing when required by downstream policy.
