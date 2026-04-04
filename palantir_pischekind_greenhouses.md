@@ -102,3 +102,23 @@ If automation is only in a protected + ingested state, treat that as a signal th
   3. open legal-review ticket,
   4. require dual-approval to restore.
 
+## What else iV7 does (beyond greenhouse breaker controls)
+From the current repository context, iV7 also covers:
+
+1. **Governance and civic process frameworks**
+   - Concept drafts for IV7 State, iV7 Union, and voter-accountability process design.
+
+2. **Operational safety communications**
+   - Public-safety PSA formatting for clinical/frontline use, focused on lawful non-violent emergency response.
+
+3. **Structured transport/profile artifacts (`.suit`)**
+   - Serialization guidance and recovery-profile handling for controlled transfer of operational payloads.
+
+4. **Leverage modeling and control indexing**
+   - Internal leverage formula/curve tags and control-test framing for constrained-input performance thinking.
+
+5. **Compliance and audit posture**
+   - Emphasis on traceability, role accountability, change control, and documented review pathways.
+
+If you want, this can be split into a separate `iv7_capabilities_overview.md` file next so it is easier to maintain.
+
