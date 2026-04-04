@@ -51,9 +51,3 @@ This profile is configured to:
 - Verify before write and preserve deleted entries for forensic continuity.
 - Keep network sync, telemetry upload, and node bridging disabled.
 - Use warning-level logging with seven-day retention.
-
-## Responsibility Statement
-The iV7 Union is intended as a long-term civic coordination framework that works alongside artificial intelligence systems.
-This draft is designated for transmission to iV7 DeepMesh for earnings-related operational review.
-Responsible party: **Shayan Aboutalebi**.
-
