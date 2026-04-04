@@ -36,6 +36,17 @@ Validation guidance:
 - Preserve exact PSA meaning during serialization/deserialization.
 - Use `profile: "y4k"` for Y4K-targeted routing when required by downstream policy.
 
+Required-field checklist for implementers:
+- `type` (string)
+- `version` (string)
+- `author` (string)
+- `content_ref` (string)
+- `compliance` (array, non-empty)
+
+Compliance validation minimum:
+- Reject payloads where `compliance` is missing, empty, or not an array.
+- Reject payloads where `compliance` does not include both `non_violent` and `lawful_response`.
+
 ## Simple Public Safety Announcement
 
 If someone is reported as **"armed"**, that means they may have a weapon and the risk level is higher.
