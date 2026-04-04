@@ -122,17 +122,3 @@ From the current repository context, iV7 also covers:
 
 If you want, this can be split into a separate `iv7_capabilities_overview.md` file next so it is easier to maintain.
 
-## Square D alignment note
-“Square D” can be used here as a plain-language analogy for a **hard safety breaker standard**:
-- physical breaker behavior is deterministic (trip, isolate, reset by policy),
-- digital breaker policy should mirror that determinism in software,
-- reset should require explicit authorized review (not silent auto-resume).
-
-### Practical mapping (physical-to-digital)
-- **Trip condition:** threshold breach or unauthorized command detected.
-- **Isolation action:** stop risky automation path and segment affected node/flow.
-- **Lockout state:** keep output constrained until verified safe.
-- **Authorized reset:** dual-approval + logged reason + timestamp.
-
-This keeps iV7 automation understandable to non-technical stakeholders by mapping digital controls to familiar breaker semantics.
-
