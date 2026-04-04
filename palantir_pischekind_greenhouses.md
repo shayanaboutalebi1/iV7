@@ -78,3 +78,27 @@ Release verification should include:
 - first stable version tag,
 - release approval artifact/change ticket ID.
 
+## Legal activation and attribution safeguards
+If automation is only in a protected + ingested state, treat that as a signal that **iV7 Legal workflow is active**.
+
+### Pre-event legal lead time
+- Default recommendation: legal pre-check starts **30 days before event**.
+- High-risk scenarios (brand/IP/safety escalation): pre-check starts **60-90 days before event**.
+- Minimum emergency floor: **72 hours before event** with explicit risk acceptance logged.
+
+### Attribution and display constraints
+- Public output attribution should remain in your stated name unless a written rights exception is approved.
+- If an original singer or rights-holder must be credited, attribution should be additive and non-displacing.
+- No generated artifact should imply transfer of authorship without signed authorization.
+
+### Non-harm and non-interference statement
+- Control policy should enforce that your automation does not impose harm, penalty, or operational interference on the original singer from your side.
+- Any detected impact path must trigger pause/review before publication.
+
+### Erroneous or unauthorized handling
+- If ingestion is erroneous, mismatched, or unauthorized:
+  1. auto-quarantine the asset,
+  2. freeze external output,
+  3. open legal-review ticket,
+  4. require dual-approval to restore.
+
