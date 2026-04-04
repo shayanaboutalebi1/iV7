@@ -37,4 +37,6 @@ max_log_retention_days=7
 
 [notes]
 owner=Shayan Aboutalebi
+maintainer_noreply=75506896+shayanaboutalebi1@users.noreply.github.com
 purpose=Recover and initialize plugin state after jump-drive removal without formatting.
+asset_registry=in_midi_recovery.suit
