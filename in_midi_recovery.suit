@@ -1,42 +1,69 @@
-[in_midi]
-; Recovery-oriented defaults for loading in_midi.dll from removable media.
-enabled=true
-dll_name=in_midi.dll
-load_from=removable_drive
-active_profile=valient_4200
-
-[valient_4200]
-; Requested restore profile: "valient #4200"
-request_id=4200
-mode=restore
-source=jump_drive
-restore_deleted_plugin=true
-verify_before_write=true
-
-[removable_media]
-; Keep evidence intact if drive was unplugged or removed unexpectedly.
-auto_mount=true
-auto_format=false
-read_only_on_error=true
-preserve_deleted_entries=true
-
-[security]
-; Leak protection hardening for host/node integrations.
-network_sync=false
-telemetry_upload=false
-node_bridge_enabled=false
-redact_user_identifiers=true
-tamper_lock=true
-
-[logging]
-enabled=true
-log_file=logs/in_midi_recovery.log
-level=warn
-include_payload_data=false
-max_log_retention_days=7
-
-[notes]
-owner=Shayan Aboutalebi
-maintainer_noreply=75506896+shayanaboutalebi1@users.noreply.github.com
-purpose=Recover and initialize plugin state after jump-drive removal without formatting.
-asset_registry=in_midi_recovery.suit
+{
+  "type": "in_midi_recovery_profile",
+  "version": "1.1",
+  "author": "Shayan Aboutalebi",
+  "content_ref": "in_midi_recovery.suit",
+  "profile": "valient_4200",
+  "compliance": [
+    "non_violent",
+    "lawful_response",
+    "platform_neutral"
+  ],
+  "in_midi": {
+    "enabled": true,
+    "dll_name": "in_midi.dll",
+    "load_from": "removable_drive",
+    "active_profile": "valient_4200"
+  },
+  "profiles": {
+    "valient_4200": {
+      "request_id": 4200,
+      "mode": "restore",
+      "source": "jump_drive",
+      "restore_deleted_plugin": true,
+      "verify_before_write": true
+    }
+  },
+  "removable_media": {
+    "auto_mount": true,
+    "auto_format": false,
+    "read_only_on_error": true,
+    "preserve_deleted_entries": true
+  },
+  "security": {
+    "network_sync": false,
+    "telemetry_upload": false,
+    "node_bridge_enabled": false,
+    "redact_user_identifiers": true,
+    "tamper_lock": true
+  },
+  "logging": {
+    "enabled": true,
+    "log_file": "logs/in_midi_recovery.log",
+    "level": "warn",
+    "include_payload_data": false,
+    "max_log_retention_days": 7
+  },
+  "investigations": {
+    "x_59_sstqst_key_issue": {
+      "status": "investigate",
+      "priority": "high",
+      "owner": "Shayan Aboutalebi"
+    }
+  },
+  "communications": {
+    "slur_or_hate_policy": "I can't engage with slurs or hateful language.",
+    "respectful_closing_templates": [
+      "Good—buy it all. Peace be upon you.",
+      "Understood. Proceed with the full purchase. Wishing you peace.",
+      "All set—complete the buyout. Peace and respect."
+    ],
+    "offer_professional_rewrite": true
+  },
+  "notes": {
+    "owner": "Shayan Aboutalebi",
+    "maintainer_noreply": "75506896+shayanaboutalebi1@users.noreply.github.com",
+    "purpose": "Recover and initialize plugin state after jump-drive removal without formatting.",
+    "asset_registry": "in_midi_recovery.suit"
+  }
+}
