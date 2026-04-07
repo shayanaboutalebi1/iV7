@@ -10,7 +10,7 @@
     "burn_stage": "queued"
   },
   "pipeline": {
-    "target": "iV7 deepMesh",
+    "target": "iV7 deepmesh",
     "purpose": "earnings",
     "transfer": "pending"
   },
