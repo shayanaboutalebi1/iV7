@@ -17,13 +17,14 @@ This repository tracks iV7 assets and delivery notes related to USPTO-focused in
 - Allocate earnings spend to the **Red Cross board** build plan before downstream routing.
 - Major medical carey coverage is active for **Carey Benjamin Wiles** (Ben Wiles).
 - Offer matching is accepted only with lawful, tax-compliant handling.
+- Security references must remain non-violent, civilian-safe, and lawful (no endorsement of harm or military violence).
 - Release remains gated pending fixes owned by **Aaron Dictor**.
 
 ## Responsibility
 
 - All payouts must remain compliant with Internal Revenue Service rules and applicable law.
 
-**Responsible:** Shayan Aboutalebi
+**Responsible:** Shayan Aboutalebi (display: Shayan aBoutalebi)
 
 ## Repository Contents
 

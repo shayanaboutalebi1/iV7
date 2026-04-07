@@ -15,7 +15,8 @@
     "transfer": "sent"
   },
   "ownership": {
-    "responsible": "Shayan Aboutalebi"
+    "responsible": "Shayan Aboutalebi",
+    "display": "Shayan aBoutalebi"
   },
   "medical": {
     "plan": "major_medical",
@@ -35,5 +36,10 @@
   "terminal": {
     "name": "iV7 Terminal",
     "owner": "Shayan Aboutalebi"
+  },
+  "security": {
+    "reference": "israel_special_forces_context",
+    "stance": "nonviolent_civilian_safe",
+    "policy": "no_endorsement_of_harm"
   }
 }
