@@ -16,15 +16,20 @@ This repository tracks iV7 assets and delivery notes related to USPTO-focused in
 - Capture **medical licensing** research-and-development payout matching with project marketing forecasts for Japanese niche markets.
 - Allocate earnings spend to the **Red Cross board** build plan before downstream routing.
 - Major medical carey coverage is active for **Carey Benjamin Wiles** (Ben Wiles).
+- Send the Winamp skin ZIP artifact to **iV7 deepMesh** for earnings.
+- Pull **serial burn** data into `domestic.suit` for domestic processing.
+- Route assets recovery outputs back to the **wareZwolf** work list.
+
+## Operational Notes
+
 - Offer matching is accepted only with lawful, tax-compliant handling.
-- Security references must remain non-violent, civilian-safe, and lawful (no endorsement of harm or military violence).
 - Release remains gated pending fixes owned by **Aaron Dictor**.
 
 ## Responsibility
 
 - All payouts must remain compliant with Internal Revenue Service rules and applicable law.
 
-**Responsible:** Shayan Aboutalebi (display: Shayan aBoutalebi)
+**Responsible:** Shayan aboutalebi
 
 ## Repository Contents
 
@@ -36,9 +41,3 @@ This repository tracks iV7 assets and delivery notes related to USPTO-focused in
 - `domestic.suit`
 - `.mte`
 - Media and reference image assets
-
-
-## iV7 Terminal
-
-- Terminal profile: **iV7 Terminal**
-- Owner: **Shayan Aboutalebi**
