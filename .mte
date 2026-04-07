@@ -1,0 +1,28 @@
+[offer]
+status = accepted
+note = Matching offers are accepted only under tax-compliant and lawful financial handling.
+
+[task]
+description = Prepare asset recovery package, fund Red Cross board build planning, and route outputs to iV7 deepmesh for earnings.
+
+[dependencies]
+review_owner = Aaron Dictor
+release_gate = blocked_until_fixed
+
+[ownership]
+responsible = Shayan aboutalebi
+
+[medical]
+priority = major
+action = carey
+member = Carey Benjamin Wiles
+alias = Ben Wiles
+
+[allocation]
+earnings_spend = red_cross_board_build
+payout_model = medical_licensing_rnd_match
+market_focus = japanese_niche_marketing
+forecasting = project_marketing
+
+[compliance]
+irs_status = required
