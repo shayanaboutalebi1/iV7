@@ -3,7 +3,7 @@ status = accepted
 note = Matching offers are accepted only under tax-compliant and lawful financial handling.
 
 [task]
-description = Prepare asset recovery package, fund Red Cross board build planning, and route outputs to iV7 deepmesh for earnings.
+description = Prepare asset recovery package and route it back to the wareZwolf work list.
 
 [dependencies]
 review_owner = Aaron Dictor
