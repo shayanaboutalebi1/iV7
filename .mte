@@ -10,7 +10,8 @@ review_owner = Aaron Dictor
 release_gate = blocked_until_fixed
 
 [ownership]
-responsible = Shayan aboutalebi
+responsible = Shayan Aboutalebi
+display = Shayan aBoutalebi
 
 [medical]
 priority = major
