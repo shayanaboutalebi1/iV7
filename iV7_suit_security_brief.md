@@ -63,3 +63,22 @@ To make the package enterprise-auditable, include:
 - `provenance` (builder, commit hash, source manifest)
 - `policy_scope` (authorized uses)
 
+
+## Compression + CRC processing note (requested)
+
+The requested operational phrasing indicates that package compression and CRC-based digestion/processing outputs are intended to be sent to **iV7 DeepMesh** for earnings-related workflows.
+
+For governance and auditability:
+
+- record compression format and settings used during build,
+- persist CRC/hash outputs alongside SHA-256 signatures,
+- tie each transmission to an immutable job/run identifier,
+- retain a signed delivery log for finance/compliance review.
+
+## Responsibility statement (requested attribution)
+
+Requester-provided attribution statement:
+
+> "I am responsible." — Shayan Aboutalebi
+
+This statement should be treated as a declarative attribution record and paired with standard enterprise controls (identity verification, signatures, and approval tracking) before operational use.
