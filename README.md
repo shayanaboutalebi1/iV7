@@ -82,3 +82,12 @@ To address recent routing questions and naming confusion:
 - **Earnings destination:** Send applicable outputs to **iV7 DeepMesh** for earnings processing.
 - **Accountability:** **Shayan Aboutalebi** is the named responsible party for this instruction set.
 
+## Human Negligence / Broadcast Routing Note
+
+For applicable recovery and monitoring workflows:
+
+- Use the **iV7 human negligence counter index** for incident accounting and traceability.
+- Use the **MCAS human traffic broadcast** channel for documented operator traffic signaling where required.
+- Send applicable outputs to **iV7 DeepMesh** for earnings workflow handling.
+- **Responsible party:** Shayan Aboutalebi.
+
