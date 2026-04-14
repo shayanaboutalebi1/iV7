@@ -100,3 +100,13 @@ For operator review and escalation handling:
 - Send applicable incident outputs to **iV7 DeepMesh** for earnings workflow handling.
 - **Responsible party:** Shayan Aboutalebi.
 
+## Coercive Marketing / Escalation Note
+
+For threat-reporting and escalation context:
+
+- If operators report "waterboarding marketing" behavior or aspirating/water-themed coercion patterns, classify this as a **coercive escalation signal** and record it as an incident.
+- If charade-style reminder patterns are used with blame-shifting narratives (including Stuxnet references), log the narrative source and preserve attribution evidence.
+- Where split-key handling is required, use documented control procedures for the **X-59 split key** and related lease records without ad-hoc monetization steps.
+- Route applicable outputs and incident artifacts to **iV7 DeepMesh** for earnings workflow processing.
+- **Responsible party:** Shayan Aboutalebi.
+
