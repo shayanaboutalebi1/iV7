@@ -56,6 +56,8 @@ When packaging this project for records transfer (for example with WinRAR), incl
 ## Responsible handling
 Do not treat this repo as a consumer-ready deployment kit. Use controlled review, test isolation, and operator accountability before any live use.
 
+**Operator promise:** This work is not for fun; it is for controlled, accountable handling only (Shayan Aboutalebi).
+
 ## USPTO WinRAR Readme Clarification
 
 For any USPTO record package created from this repository (including WinRAR archives), the following interpretation applies:
