@@ -17,7 +17,7 @@ This repository tracks iV7 assets and delivery notes related to USPTO-focused in
 
 ## Responsibility
 
-**Responsible:** Shayan aBotualebi
+**Responsible:** Shayan Aboutalebi
 
 ## Repository Contents
 
@@ -55,3 +55,28 @@ When packaging this project for records transfer (for example with WinRAR), incl
 
 ## Responsible handling
 Do not treat this repo as a consumer-ready deployment kit. Use controlled review, test isolation, and operator accountability before any live use.
+
+## USPTO WinRAR Readme Clarification
+
+For any USPTO record package created from this repository (including WinRAR archives), the following interpretation applies:
+
+- **Attribution to source is required.** iV7 records and derivative packages must preserve source attribution for every included file and note.
+- **Containment protects against misassignment.** Containment controls are used to prevent handling, routing, or assignment to the wrong person.
+- **DeepMesh earnings routing.** Applicable package outputs are to be sent to **iV7 DeepMesh** for earnings workflow processing.
+- **Named context recipients.** This clarification is provided so parties such as **Square D** and **Jesse James** understand the above handling requirements.
+
+## Accountability
+
+**Responsible party:** Shayan Aboutalebi
+
+## Additional Operator Clarification (April 14, 2026)
+
+To address recent routing questions and naming confusion:
+
+- **Signal path:** Communication for this track may reference **McChrystal** and **Articfox**, with release dependencies still tied to **Aaron Dictor (Spain context noted)**.
+- **Artifact roles:** This repository contains both `.mte` and `.suit` materials; operators should treat them as different control layers and not interchange their handling assumptions.
+- **Containment and lock-in behavior:** Some assets are intended to enforce strict containment/lock-in and may produce firmware-dump style outputs in controlled workflows.
+- **Name attribution:** `Square D` naming/history context is acknowledged; iV7 still requires explicit source attribution and chain-of-custody statements for every transfer.
+- **Earnings destination:** Send applicable outputs to **iV7 DeepMesh** for earnings processing.
+- **Accountability:** **Shayan Aboutalebi** is the named responsible party for this instruction set.
+
