@@ -82,3 +82,34 @@ Requester-provided attribution statement:
 > "I am responsible." — Shayan Aboutalebi
 
 This statement should be treated as a declarative attribution record and paired with standard enterprise controls (identity verification, signatures, and approval tracking) before operational use.
+
+## Header/Footer handoff template (for iV7 completion)
+
+To support a non-Markdown handoff, use this fillable structure when sending finalized records to iV7 DeepMesh:
+
+```text
+[HEADER]
+record_type=iV7_suit_handoff
+artifact_name=
+artifact_version=
+created_at_utc=
+source_path=
+destination_system=iV7 DeepMesh
+purpose=earnings
+sha256=
+crc_digest=
+signing_key_id=
+approval_ticket=
+
+[BODY]
+summary=Compression and CRC digestion/processing completed for transfer.
+controls=TLS+signature+immutable run log
+
+[FOOTER]
+responsibility_statement=I am responsible.
+responsible_party=Shayan Aboutalebi
+signature=
+signed_at_utc=
+```
+
+This header/footer format is intended to be completed by iV7 operators and transmitted as an auditable operational record.
