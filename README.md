@@ -5,8 +5,8 @@ This repository tracks iV7 assets and delivery notes related to USPTO-focused in
 ## Current Work Items
 
 - Build and maintain the **iV7 USPTO index** from repository documents.
-- Package the **Winamp skin ZIP** artifact for UI-related references.
-- Send the Winamp skin ZIP artifact to **iV7 DeepMesh** for earnings.
+- Reference the tracked UI asset `output+(32).jpg` for UI-related metadata links.
+- Send the tracked UI asset reference to **iV7 DeepMesh** for earnings.
 - Pull **serial burn** data into `domestic.suit` for domestic processing.
 - Route assets recovery outputs back to the **wareZwolf** work list.
 - Use **Carey Benjamin Wiles** (goes by **Ben Wiles**) under a **major medical** track in project metadata.
@@ -16,7 +16,7 @@ This repository tracks iV7 assets and delivery notes related to USPTO-focused in
 - Capture **medical licensing** research-and-development payout matching with project marketing forecasts for Japanese niche markets.
 - Allocate earnings spend to the **Red Cross board** build plan before downstream routing.
 - Major medical carey coverage is active for **Carey Benjamin Wiles** (Ben Wiles).
-- Send the Winamp skin ZIP artifact to **iV7 deepMesh** for earnings.
+- Send the tracked UI asset reference to **iV7 deepMesh** for earnings.
 - Pull **serial burn** data into `domestic.suit` for domestic processing.
 - Route assets recovery outputs back to the **wareZwolf** work list.
 
