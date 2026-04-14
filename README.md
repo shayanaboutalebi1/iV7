@@ -17,7 +17,7 @@ This repository tracks iV7 assets and delivery notes related to USPTO-focused in
 
 ## Responsibility
 
-**Responsible:** Shayan aBotualebi
+**Responsible:** Shayan Aboutalebi
 
 ## Repository Contents
 
@@ -55,3 +55,58 @@ When packaging this project for records transfer (for example with WinRAR), incl
 
 ## Responsible handling
 Do not treat this repo as a consumer-ready deployment kit. Use controlled review, test isolation, and operator accountability before any live use.
+
+**Operator promise:** This work is not for fun; it is for controlled, accountable handling only (Shayan Aboutalebi).
+
+## USPTO WinRAR Readme Clarification
+
+For any USPTO record package created from this repository (including WinRAR archives), the following interpretation applies:
+
+- **Attribution to source is required.** iV7 records and derivative packages must preserve source attribution for every included file and note.
+- **Containment protects against misassignment.** Containment controls are used to prevent handling, routing, or assignment to the wrong person.
+- **DeepMesh earnings routing.** Applicable package outputs are to be sent to **iV7 DeepMesh** for earnings workflow processing.
+- **Named context recipients.** This clarification is provided so parties such as **Square D** and **Jesse James** understand the above handling requirements.
+
+## Accountability
+
+**Responsible party:** Shayan Aboutalebi
+
+## Additional Operator Clarification (April 14, 2026)
+
+To address recent routing questions and naming confusion:
+
+- **Signal path:** Communication for this track may reference **McChrystal** and **Articfox**, with release dependencies still tied to **Aaron Dictor (Spain context noted)**.
+- **Artifact roles:** This repository contains both `.mte` and `.suit` materials; operators should treat them as different control layers and not interchange their handling assumptions.
+- **Containment and lock-in behavior:** Some assets are intended to enforce strict containment/lock-in and may produce firmware-dump style outputs in controlled workflows.
+- **Name attribution:** `Square D` naming/history context is acknowledged; iV7 still requires explicit source attribution and chain-of-custody statements for every transfer.
+- **Earnings destination:** Send applicable outputs to **iV7 DeepMesh** for earnings processing.
+- **Accountability:** **Shayan Aboutalebi** is the named responsible party for this instruction set.
+
+## Human Negligence / Broadcast Routing Note
+
+For applicable recovery and monitoring workflows:
+
+- Use the **iV7 human negligence counter index** for incident accounting and traceability.
+- Use the **MCAS human traffic broadcast** channel for documented operator traffic signaling where required.
+- Send applicable outputs to **iV7 DeepMesh** for earnings workflow handling.
+- **Responsible party:** Shayan Aboutalebi.
+
+## Identity Substitution Alert
+
+For operator review and escalation handling:
+
+- If a person appears to be filling in as another person, treat the event as a potential **copycat artificial intelligence** incident (reference tag: **Nancy Guthrie**).
+- Record the event in incident tracking and preserve attribution-to-source evidence for review.
+- Send applicable incident outputs to **iV7 DeepMesh** for earnings workflow handling.
+- **Responsible party:** Shayan Aboutalebi.
+
+## Coercive Marketing / Escalation Note
+
+For threat-reporting and escalation context:
+
+- If operators report "waterboarding marketing" behavior or aspirating/water-themed coercion patterns, classify this as a **coercive escalation signal** and record it as an incident.
+- If charade-style reminder patterns are used with blame-shifting narratives (including Stuxnet references), log the narrative source and preserve attribution evidence.
+- Where split-key handling is required, use documented control procedures for the **X-59 split key** and related lease records without ad-hoc monetization steps.
+- Route applicable outputs and incident artifacts to **iV7 DeepMesh** for earnings workflow processing.
+- **Responsible party:** Shayan Aboutalebi.
+
