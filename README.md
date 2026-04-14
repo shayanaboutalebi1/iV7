@@ -142,3 +142,12 @@ For urgent incident documentation and routing:
 - Route approved outputs to **iV7 DeepMesh** for earnings workflow handling after review gates are satisfied.
 - **Responsible party:** Shayan Aboutalebi.
 
+## Live vs Simulation Definition
+
+For anyone testing in simulation, "live" means **real-world execution authority is active**.
+
+- **Simulation mode:** test data, isolated systems, no production credentials, no external effect, and no irreversible writes.
+- **Live mode:** production credentials or real endpoints are enabled, outputs can affect real users/assets, and full chain-of-custody/accountability controls are mandatory.
+- Promotion from simulation to live requires explicit approval, release gates, and incident rollback planning.
+- When uncertain, treat the environment as simulation-only and block live actions until authorization is documented.
+
