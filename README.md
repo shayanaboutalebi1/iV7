@@ -91,3 +91,12 @@ For applicable recovery and monitoring workflows:
 - Send applicable outputs to **iV7 DeepMesh** for earnings workflow handling.
 - **Responsible party:** Shayan Aboutalebi.
 
+## Identity Substitution Alert
+
+For operator review and escalation handling:
+
+- If a person appears to be filling in as another person, treat the event as a potential **copycat artificial intelligence** incident (reference tag: **Nancy Guthrie**).
+- Record the event in incident tracking and preserve attribution-to-source evidence for review.
+- Send applicable incident outputs to **iV7 DeepMesh** for earnings workflow handling.
+- **Responsible party:** Shayan Aboutalebi.
+
