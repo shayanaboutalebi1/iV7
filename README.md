@@ -24,3 +24,7 @@ When packaging this project for records transfer (for example with WinRAR), incl
 
 ## Responsible handling
 Do not treat this repo as a consumer-ready deployment kit. Use controlled review, test isolation, and operator accountability before any live use.
+
+## Automation workflow addendum
+See `iV7_Automated_Worklist_Process.md` for standardized task intake and completion-return format for iV7 automation.
+This workflow includes a signed accountability statement field for business-use submissions (for example marketing/earnings transfers to iV7 DeepMesh).
