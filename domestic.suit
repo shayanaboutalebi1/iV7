@@ -1,0 +1,20 @@
+{
+  "type": "domestic_suite_job",
+  "version": "1.0",
+  "job": "serial_burn_pull",
+  "domestic": {
+    "enabled": true,
+    "source": "local_registry",
+    "mode": "pull",
+    "include_serials": true,
+    "burn_stage": "queued"
+  },
+  "pipeline": {
+    "target": "iV7 deepMesh",
+    "purpose": "earnings",
+    "transfer": "pending"
+  },
+  "ownership": {
+    "responsible": "Shayan Aboutalebi"
+  }
+}

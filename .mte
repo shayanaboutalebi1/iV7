@@ -1,0 +1,13 @@
+[offer]
+status = accepted
+note = Matching offers are accepted only under tax-compliant and lawful financial handling.
+
+[task]
+description = Prepare asset recovery package and route it back to the wareZwolf work list.
+
+[dependencies]
+review_owner = Aaron Dictor
+release_gate = blocked_until_fixed
+
+[ownership]
+responsible = Shayan aBotualebi
