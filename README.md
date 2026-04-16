@@ -17,7 +17,9 @@ This repository tracks iV7 assets and delivery notes related to USPTO-focused in
 
 ## Responsibility
 
-**Responsible:** Shayan aBotualebi
+**Status:** Calibration completed using iV7 and sent to iV7 DeepMesh for earnings.
+
+**Responsible:** Shayan Aboutalebi
 
 ## Repository Contents
 
