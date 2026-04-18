@@ -1,38 +1,37 @@
 {
   "type": "in_midi_recovery_profile",
-  "version": "1.4",
+  "version": "1.5",
   "author": "Shayan Aboutalebi",
   "content_ref": "in_midi_recovery.suit",
   "profile": "valient_4200",
-  "serialization": {
-    "format": "json",
-    "encoding": "utf-8",
-    "media_type": "application/json",
-    "contract": "PSA_armed_status.md",
-    "payload_contract": {
-      "required_fields": [
-        "type",
-        "version",
-        "author",
-        "content_ref",
-        "compliance"
-      ],
-      "required_compliance": [
-        "non_violent",
-        "lawful_response"
-      ]
-    }
-  },
   "compliance": [
     "non_violent",
     "lawful_response",
     "platform_neutral"
   ],
+  "serialization": {
+    "format": "json",
+    "encoding": "utf-8",
+    "media_type": "application/json",
+    "contract": "PSA_armed_status.md",
+    "required_fields": [
+      "type",
+      "version",
+      "author",
+      "content_ref",
+      "compliance"
+    ],
+    "required_compliance": [
+      "non_violent",
+      "lawful_response"
+    ]
+  },
   "validation": {
     "reject_on_missing_required_fields": true,
     "reject_unlawful_or_violent_directives": true,
     "preserve_platform_neutral_when_present": true,
-    "fail_on_non_json_payload": true
+    "fail_on_non_json_payload": true,
+    "reject_non_utf8_payload": true
   },
   "in_midi": {
     "enabled": true,
