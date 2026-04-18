@@ -52,17 +52,25 @@ compliance_must_not_include = ["violent_action", "retaliation", "unlawful_action
 on_missing_required_or_claims = "reject_payload"
 ```
 
-JSON Schema-style minimum:
+JSON Schema-style minimum (draft 2020-12 compatible):
 
 ```json
 {
+  "type": "object",
   "required": ["type", "version", "author", "content_ref", "compliance"],
   "properties": {
+    "type": {"type": "string"},
+    "version": {"type": "string"},
+    "author": {"type": "string"},
+    "content_ref": {"type": "string"},
     "compliance": {
       "type": "array",
+      "items": {"type": "string"},
       "minItems": 2,
-      "contains_non_violent": true,
-      "contains_lawful_response": true
+      "allOf": [
+        {"contains": {"const": "non_violent"}},
+        {"contains": {"const": "lawful_response"}}
+      ]
     }
   },
   "additionalProperties": true
