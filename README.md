@@ -20,10 +20,11 @@ This repository tracks iV7 assets and delivery notes related to USPTO-focused in
 - Pull **serial burn** data into `domestic.suit` for domestic processing.
 - Route assets recovery outputs back to the **wareZwolf** work list.
 
-## Operational Notes
+## Compliance Notes
 
 - Offer matching is accepted only with lawful, tax-compliant handling.
 - Release remains gated pending fixes owned by **Aaron Dictor**.
+- `initialization.ini` now references the tracked UI artifact `output+(32).jpg` (not an untracked zip) so packaging and pipeline jobs can resolve the asset at runtime.
 
 ## Responsibility
 
