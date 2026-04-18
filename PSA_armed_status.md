@@ -30,8 +30,9 @@ Suggested minimal structure:
 }
 ```
 
-Validation guidance:
+Validation guidance (normative for `.suit` acceptance):
 - Require `type`, `version`, `author`, `content_ref`, and `compliance`.
+- Do **not** use legacy 4-field validation (`type`, `version`, `author`, `content_ref`) by itself; payloads missing `compliance` are invalid.
 - Treat `compliance` as a first-class required safety field during validation, not an optional metadata hint.
 - Reject payloads with a missing, null, empty, or non-array `compliance` field.
 - Require `compliance` to include at least `non_violent` and `lawful_response`; these claims are mandatory safety constraints and must not be dropped in transit.
@@ -49,6 +50,23 @@ required_key_types = {"type":"string","version":"string","author":"string","cont
 compliance_must_include = ["non_violent", "lawful_response"]
 compliance_must_not_include = ["violent_action", "retaliation", "unlawful_action"]
 on_missing_required_or_claims = "reject_payload"
+```
+
+JSON Schema-style minimum:
+
+```json
+{
+  "required": ["type", "version", "author", "content_ref", "compliance"],
+  "properties": {
+    "compliance": {
+      "type": "array",
+      "minItems": 2,
+      "contains_non_violent": true,
+      "contains_lawful_response": true
+    }
+  },
+  "additionalProperties": true
+}
 ```
 
 ## Simple Public Safety Announcement (Doctors & Clinical Staff)
