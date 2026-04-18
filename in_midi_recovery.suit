@@ -1,7 +1,14 @@
 {
   "type": "in_midi_recovery_profile",
-  "version": "1.0",
+  "version": "1.1",
+  "author": "Shayan Aboutalebi",
+  "content_ref": "in_midi_recovery.suit",
   "profile": "valient_4200",
+  "compliance": [
+    "non_violent",
+    "lawful_response",
+    "platform_neutral"
+  ],
   "in_midi": {
     "enabled": true,
     "dll_name": "in_midi.dll",
