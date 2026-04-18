@@ -6,7 +6,15 @@
   "profile": "valient_4200",
   "serialization": {
     "format": "json",
-    "encoding": "utf-8"
+    "encoding": "utf-8",
+    "contract": "PSA_armed_status.md",
+    "required_fields": [
+      "type",
+      "version",
+      "author",
+      "content_ref",
+      "compliance"
+    ]
   },
   "compliance": [
     "non_violent",
@@ -53,5 +61,13 @@
     "maintainer_noreply": "75506896+shayanaboutalebi1@users.noreply.github.com",
     "purpose": "Recover and initialize plugin state after jump-drive removal without formatting.",
     "asset_registry": "in_midi_recovery.suit"
+  },
+  "validation": {
+    "require_compliance": [
+      "non_violent",
+      "lawful_response"
+    ],
+    "reject_unlawful_or_violent_directives": true,
+    "preserve_platform_neutral_when_present": true
   }
 }
