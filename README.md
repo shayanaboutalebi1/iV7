@@ -24,7 +24,7 @@ This repository tracks iV7 assets and delivery notes related to USPTO-focused in
 
 - Offer matching is accepted only with lawful, tax-compliant handling.
 - Release remains gated pending fixes owned by **Aaron Dictor**.
-- `initialization.ini` now references the tracked UI artifact `output+(32).jpg` (not an untracked zip) so packaging and pipeline jobs can resolve the asset at runtime.
+- `initialization.ini` now references the tracked UI artifact `./output+(32).jpg` (not an untracked zip) so packaging and pipeline jobs can resolve the asset at runtime.
 
 ## Responsibility
 
@@ -41,5 +41,5 @@ This repository tracks iV7 assets and delivery notes related to USPTO-focused in
 - `initialization.ini`
 - `domestic.suit`
 - `.mte`
-- `output+(32).jpg` (tracked UI package referenced by `initialization.ini`)
+- `output+(32).jpg` (tracked UI package referenced by `initialization.ini` via `./output+(32).jpg`)
 - Media and reference image assets
