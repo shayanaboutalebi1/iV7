@@ -35,6 +35,7 @@ Validation guidance:
 - Treat `compliance` as a first-class required safety field during validation, not an optional metadata hint.
 - Reject payloads with a missing, null, empty, or non-array `compliance` field.
 - Require `compliance` to include at least `non_violent` and `lawful_response`; these claims are mandatory safety constraints and must not be dropped in transit.
+- Fail closed if mandatory compliance claims are absent after any transform, relay, or deserialization step.
 - Preserve `platform_neutral` when present in source payloads.
 - Reject payloads that add violent or unlawful directives.
 - Preserve exact PSA meaning during serialization/deserialization.
@@ -45,6 +46,7 @@ Example validator checklist (pseudo-schema):
 ```text
 required_keys = ["type", "version", "author", "content_ref", "compliance"]
 compliance_must_include = ["non_violent", "lawful_response"]
+on_missing_required_or_claims = "reject_payload"
 ```
 
 ## Simple Public Safety Announcement (Doctors & Clinical Staff)
