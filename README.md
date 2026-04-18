@@ -40,4 +40,5 @@ This repository tracks iV7 assets and delivery notes related to USPTO-focused in
 - `initialization.ini`
 - `domestic.suit`
 - `.mte`
+- `output+(32).jpg` (tracked UI package referenced by `initialization.ini`)
 - Media and reference image assets
