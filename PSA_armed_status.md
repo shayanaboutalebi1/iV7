@@ -30,6 +30,9 @@ Suggested minimal structure:
 }
 ```
 
+Mandatory baseline for safety-critical transport: every accepted payload MUST carry
+`"compliance"` with at least `non_violent` and `lawful_response`.
+
 Validation guidance (normative for `.suit` acceptance):
 - Require `type`, `version`, `author`, `content_ref`, and `compliance`.
 - Do **not** use legacy 4-field validation (`type`, `version`, `author`, `content_ref`) by itself; payloads missing `compliance` are invalid.
@@ -66,6 +69,7 @@ JSON Schema-style minimum (draft 2020-12 compatible):
     "compliance": {
       "type": "array",
       "items": {"type": "string"},
+      "uniqueItems": true,
       "minItems": 2,
       "allOf": [
         {"contains": {"const": "non_violent"}},
