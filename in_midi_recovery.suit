@@ -4,6 +4,10 @@
   "author": "Shayan Aboutalebi",
   "content_ref": "in_midi_recovery.suit",
   "profile": "valient_4200",
+  "serialization": {
+    "format": "json",
+    "encoding": "utf-8"
+  },
   "compliance": [
     "non_violent",
     "lawful_response",
