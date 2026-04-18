@@ -8,6 +8,16 @@
     "format": "json",
     "encoding": "utf-8"
   },
+  "validation": {
+    "required_fields": [
+      "type",
+      "version",
+      "author",
+      "content_ref",
+      "compliance"
+    ],
+    "reject_on_missing_required_fields": true
+  },
   "compliance": [
     "non_violent",
     "lawful_response",
