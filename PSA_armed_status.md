@@ -45,7 +45,9 @@ Example validator checklist (pseudo-schema):
 
 ```text
 required_keys = ["type", "version", "author", "content_ref", "compliance"]
+required_key_types = {"type":"string","version":"string","author":"string","content_ref":"string","compliance":"array[string]"}
 compliance_must_include = ["non_violent", "lawful_response"]
+compliance_must_not_include = ["violent_action", "retaliation", "unlawful_action"]
 on_missing_required_or_claims = "reject_payload"
 ```
 
