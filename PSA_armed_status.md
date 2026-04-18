@@ -34,8 +34,9 @@ Mandatory baseline for safety-critical transport: every accepted payload MUST ca
 `"compliance"` with at least `non_violent` and `lawful_response`.
 
 Validation guidance (normative for `.suit` acceptance):
-- Require `type`, `version`, `author`, `content_ref`, and `compliance`.
-- Do **not** use legacy 4-field validation (`type`, `version`, `author`, `content_ref`) by itself; payloads missing `compliance` are invalid.
+- Require `type`, `version`, `author`, `content_ref`, and `compliance` in every validator implementation.
+- Treat any implementation that validates only the legacy 4-field set (`type`, `version`, `author`, `content_ref`) as non-compliant for safety-critical transport.
+- Do **not** use legacy 4-field validation by itself; payloads missing `compliance` are invalid.
 - Treat `compliance` as a first-class required safety field during validation, not an optional metadata hint.
 - Reject payloads with a missing, null, empty, or non-array `compliance` field.
 - Require `compliance` to include at least `non_violent` and `lawful_response`; these claims are mandatory safety constraints and must not be dropped in transit.
