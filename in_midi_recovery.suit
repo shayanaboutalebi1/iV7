@@ -1,21 +1,19 @@
 {
   "type": "in_midi_recovery_profile",
-  "version": "1.1",
+  "version": "1.2",
   "author": "Shayan Aboutalebi",
   "content_ref": "in_midi_recovery.suit",
   "profile": "valient_4200",
   "serialization": {
     "format": "json",
     "encoding": "utf-8",
-    "contract": "PSA_armed_status.md",
-    "required_fields": [
-      "type",
-      "version",
-      "author",
-      "content_ref",
-      "compliance"
-    ]
+    "contract": "PSA_armed_status.md"
   },
+  "compliance": [
+    "non_violent",
+    "lawful_response",
+    "platform_neutral"
+  ],
   "validation": {
     "required_fields": [
       "type",
@@ -24,13 +22,14 @@
       "content_ref",
       "compliance"
     ],
-    "reject_on_missing_required_fields": true
+    "require_compliance": [
+      "non_violent",
+      "lawful_response"
+    ],
+    "reject_on_missing_required_fields": true,
+    "reject_unlawful_or_violent_directives": true,
+    "preserve_platform_neutral_when_present": true
   },
-  "compliance": [
-    "non_violent",
-    "lawful_response",
-    "platform_neutral"
-  ],
   "in_midi": {
     "enabled": true,
     "dll_name": "in_midi.dll",
@@ -71,13 +70,5 @@
     "maintainer_noreply": "75506896+shayanaboutalebi1@users.noreply.github.com",
     "purpose": "Recover and initialize plugin state after jump-drive removal without formatting.",
     "asset_registry": "in_midi_recovery.suit"
-  },
-  "validation": {
-    "require_compliance": [
-      "non_violent",
-      "lawful_response"
-    ],
-    "reject_unlawful_or_violent_directives": true,
-    "preserve_platform_neutral_when_present": true
   }
 }
