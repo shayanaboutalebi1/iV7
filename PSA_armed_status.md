@@ -35,6 +35,7 @@ Mandatory baseline for safety-critical transport: every accepted payload MUST ca
 
 Validation guidance (normative for `.suit` acceptance):
 - Require `type`, `version`, `author`, `content_ref`, and `compliance` in every validator implementation.
+- Enforce required keys before any profile/default expansion so `compliance` cannot be implicitly omitted.
 - Treat any implementation that validates only the legacy 4-field set (`type`, `version`, `author`, `content_ref`) as non-compliant for safety-critical transport.
 - Do **not** use legacy 4-field validation by itself; payloads missing `compliance` are invalid.
 - Treat `compliance` as a first-class required safety field during validation, not an optional metadata hint.
@@ -78,7 +79,8 @@ JSON Schema-style minimum (draft 2020-12 compatible):
       ]
     }
   },
-  "additionalProperties": true
+  "additionalProperties": true,
+  "$comment": "Safety-critical rule: reject payloads that omit compliance or required non_violent/lawful_response claims."
 }
 ```
 
