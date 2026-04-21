@@ -1,7 +1,8 @@
 {
   "type": "in_midi_recovery_profile",
-  "version": "1.5",
+  "version": "1.6",
   "author": "Shayan Aboutalebi",
+  "audience": "iv7_operations",
   "content_ref": "in_midi_recovery.suit",
   "profile": "valient_4200",
   "compliance": [
