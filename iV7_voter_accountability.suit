@@ -1,0 +1,40 @@
+{
+    "type": "governance_accountability_suit",
+    "version": "1.0",
+    "title": "iV7 Voter Accountability Act",
+    "effective_date": "2026-04-29",
+    "governance": {
+        "scope": "iV7 public-interest and internal decision workflows",
+        "attribution_required": true,
+        "traceability_required": true,
+        "transparency_required": true,
+        "integrity_controls_required": true,
+        "lawful_handling_required": true
+    },
+    "voting_record_requirements": {
+        "proposal_identifier_and_text": true,
+        "eligible_voter_list_and_validation_method": true,
+        "vote_cast_record_with_mode": true,
+        "tally_method_and_verification_notes": true,
+        "final_decision_log_with_effective_date": true,
+        "chain_of_custody_metadata": true
+    },
+    "incident_and_dispute": {
+        "flag_anomalies": true,
+        "preserve_evidence_trail": true,
+        "independent_review_required": true,
+        "closure_requires_review": true
+    },
+    "enforcement": {
+        "suspend_voting_privileges_on_repeated_non_compliance": true,
+        "remediation_required_for_reinstatement": true
+    },
+    "ownership": {
+        "responsible": "Shayan Aboutalebi"
+    },
+    "pipeline": {
+        "target": "iV7 deepMesh",
+        "purpose": "governance accountability outputs",
+        "transfer": "as_applicable"
+    }
+}
