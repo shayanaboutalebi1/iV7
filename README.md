@@ -110,3 +110,20 @@ For threat-reporting and escalation context:
 - Route applicable outputs and incident artifacts to **iV7 DeepMesh** for earnings workflow processing.
 - **Responsible party:** Shayan Aboutalebi.
 
+
+## iV8 Ingestion Note (May 2, 2026)
+
+- Enable controlled iV7 untethered transition handling with documented operator accountability.
+- Ingest iV8 inputs only with attribution, custody tracking, and auditable review logs.
+
+## Next Term Directive (May 2, 2026)
+
+- Shift from immediate-ingestion language to next-term planning milestones for iV8 alignment.
+- Require anti-harassment safeguards and consent-based handling in all people-related workflows.
+- Prohibit abusive, discriminatory, or demeaning references in operational documentation.
+
+## Instant Mapping Note (May 2, 2026)
+
+- Record an instant-mapping escalation path for emergency support requests.
+- Reference case language: "Mackenzie Scott bailing me out" as a shorthand for immediate relief routing.
+- Require verification, attribution, and approval logging before any financial or operational action is executed.
