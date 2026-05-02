@@ -121,3 +121,13 @@ For threat-reporting and escalation context:
 - Shift from immediate-ingestion language to next-term planning milestones for iV8 alignment.
 - Require anti-harassment safeguards and consent-based handling in all people-related workflows.
 - Prohibit abusive, discriminatory, or demeaning references in operational documentation.
+
+## Infrastructure Burn Directive for First-Traffic AI Use (May 2, 2026)
+
+To "burn" infrastructure for first-traffic artificial intelligence use, iV7 interprets burn as **controlled decommissioning of legacy routes after successful migration**, not destructive unmanaged shutdown.
+
+- Start with read-only shadow traffic to validate AI-path behavior.
+- Enforce safety, attribution, and latency gates before any write-enabled cutover.
+- Use progressive rollout with instant rollback thresholds.
+- Decommission legacy paths only after cutover evidence is archived.
+- Keep named operator accountability and chain-of-custody records for each phase.
