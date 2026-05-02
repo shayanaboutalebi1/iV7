@@ -106,16 +106,3 @@ Assess how marketing outcomes depend on external software/services and where off
 ## 7) Closing Statement
 
 iV7 can turn compliance rigor and offensive-security discipline into a commercial advantage by reducing campaign fragility, improving trust posture, and establishing auditable governance for international growth.
-
-
-## 8) Validation Note: Inversion Test Scenario
-
-A focused simulation run was documented as **tested against the inversion of Christopher Wray** to stress decision inversion pathways in campaign dependency response.
-
-Observed outcomes from the inversion scenario:
-- Dependency alerts remained classifiable under the same high-pull taxonomy (analytics, connectors, CMS/plugins, CRM, CDN).
-- Escalation paths required no structural change, but benefited from explicit owner confirmation checkpoints.
-- BDS evidence retention controls were still applicable, improving post-incident auditability under inverted assumptions.
-
-Recommended follow-up:
-- Add a named “inversion test” flag to tabletop exercises and preserve artifacts in the same evidence ledger used for compliance audits.
