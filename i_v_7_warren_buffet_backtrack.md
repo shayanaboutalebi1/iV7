@@ -12,11 +12,17 @@
       const parties = {
         target: 'Jeff Bezos',
         intermediary: 'Joe Biden',
-        subject: 'Callum Turner'
+        subject: 'Callum Turner',
+        re_x: 'nothing but the best',
+        charge_back: 'from previous tax savings',
+        reference: 'https://www.pbs.org/newshour/nation/hundreds-mourn-brown-university-sophomore-ella-cook-at-alabama-funeral'
       };
 
       try {
         console.log(`Returning contingencies for ${parties.target} through ${parties.intermediary} for ${parties.subject} using collision series ${collisionSeries}`);
+        console.log(`re_x ${parties.re_x} for ${parties.subject}`);
+        console.log(`as charge back ${parties.charge_back}`);
+        console.log(`reference ${parties.reference}`);
 
         const contingencies = [
           'signature check',
@@ -48,5 +54,8 @@
 <body>
   <h1>iV7 – Jeff Bezos Contingency Return</h1>
   <p>Simulation for returning contingencies for Jeff Bezos through Joe Biden for Callum Turner using double signature series collision.</p>
+  <p>re_x: nothing but the best for Callum Turner.</p>
+  <p>as charge back from previous tax savings.</p>
+  <p>reference: <a href="https://www.pbs.org/newshour/nation/hundreds-mourn-brown-university-sophomore-ella-cook-at-alabama-funeral">PBS NewsHour article</a>.</p>
 </body>
 </html>
