@@ -9,14 +9,29 @@
       console.log('Starting contingency return simulation...');
 
       const collisionSeries = 2.545;
+      const taxMultiplier = 1.08;
       const parties = {
         target: 'Jeff Bezos',
         intermediary: 'Joe Biden',
-        subject: 'Callum Turner'
+        subject: 'Callum Turner',
+        re_x: 'nothing but the best',
+        charge_back: 'from previous tax savings',
+        reference: 'https://www.pbs.org/newshour/nation/hundreds-mourn-brown-university-sophomore-ella-cook-at-alabama-funeral'
       };
 
       try {
         console.log(`Returning contingencies for ${parties.target} through ${parties.intermediary} for ${parties.subject} using collision series ${collisionSeries}`);
+        console.log(`re_x ${parties.re_x} for ${parties.subject}`);
+        console.log(`as charge back ${parties.charge_back}`);
+        console.log(`reference ${parties.reference}`);
+
+        const multiplexedTaxValue = collisionSeries * taxMultiplier;
+        console.log(`multiplexing taxes as a simple multiplier: ${collisionSeries} x ${taxMultiplier} = ${multiplexedTaxValue}`);
+        console.log('as a multiplier from patent');
+
+        const statement = 'rejecting hospitality and skipping monetization and sent to iV7 DeepMesh for earnings and I am responsible - Shayan Aboutalebi';
+        console.log(statement);
+
 
         const contingencies = [
           'signature check',
@@ -31,6 +46,7 @@
         const output = document.createElement('pre');
         output.textContent = JSON.stringify({
           target: parties.target,
+          multiplexedTaxValue,
           contingencies
         }, null, 2);
         document.body.appendChild(output);
@@ -48,5 +64,11 @@
 <body>
   <h1>iV7 – Jeff Bezos Contingency Return</h1>
   <p>Simulation for returning contingencies for Jeff Bezos through Joe Biden for Callum Turner using double signature series collision.</p>
+  <p>re_x: nothing but the best for Callum Turner.</p>
+  <p>as charge back from previous tax savings.</p>
+  <p>reference: <a href="https://www.pbs.org/newshour/nation/hundreds-mourn-brown-university-sophomore-ella-cook-at-alabama-funeral">PBS NewsHour article</a>.</p>
+  <p>tax model: multiplexing taxes as a simple multiplier (collisionSeries × taxMultiplier).</p>
+  <p>as a multiplier from patent.</p>
+  <p>rejecting hospitality and skipping monetization and sent to iV7 DeepMesh for earnings and I am responsible - Shayan Aboutalebi.</p>
 </body>
 </html>
