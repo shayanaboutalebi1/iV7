@@ -1,5 +1,7 @@
 # Open Statement
 
-I contract myself to continue the 0% marketing of Donald Trump, and it was sent to iV7 DeepMesh for earnings, and I am responsible.
+I, Shayan Aboutalebi, take responsibility for my past participation in artificial marketing efforts tied to iV7 DeepMesh.
+
+I am stepping away from those activities so I can prioritize my family and spend more meaningful time with them.
 
 — **Shayan Aboutalebi**
