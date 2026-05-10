@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>iV7 gaggleVC Finite HTML Contract</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #111a33;
+      --panel-2: #172345;
+      --text: #e7ecff;
+      --muted: #a9b5da;
+      --accent: #8ab4ff;
+      --line: rgba(255,255,255,0.10);
+      --good: #7ee0a4;
+      --warn: #ffd37a;
+      --danger: #ff8a8a;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      background: radial-gradient(circle at top, #15244a 0%, var(--bg) 55%);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 32px 20px 48px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, rgba(138,180,255,0.16), rgba(126,224,164,0.08));
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.28);
+    }
+
+    .kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 12px;
+      color: var(--accent);
+      margin: 0 0 8px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(30px, 4vw, 52px);
+      line-height: 1.05;
+    }
+
+    .sub {
+      margin-top: 12px;
+      color: var(--muted);
+      max-width: 75ch;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .card {
+      background: rgba(17,26,51,0.88);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 20px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 12px 34px rgba(0,0,0,0.18);
+    }
+
+    .span-12 { grid-column: span 12; }
+    .span-8 { grid-column: span 8; }
+    .span-6 { grid-column: span 6; }
+    .span-4 { grid-column: span 4; }
+
+    @media (max-width: 900px) {
+      .span-8, .span-6, .span-4 { grid-column: span 12; }
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 22px;
+    }
+
+    h3 {
+      margin: 18px 0 8px;
+      font-size: 17px;
+      color: #dce6ff;
+    }
+
+    p { margin: 8px 0; }
+    ul { margin: 10px 0 0 20px; }
+    li { margin: 6px 0; }
+
+    .pillrow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .pill {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.04);
+      padding: 8px 12px;
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      overflow: hidden;
+      border-radius: 14px;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 12px 10px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+
+    th {
+      color: #dce6ff;
+      background: rgba(255,255,255,0.03);
+      font-weight: 600;
+    }
+
+    .note {
+      color: var(--muted);
+      font-size: 14px;
+      border-left: 3px solid var(--accent);
+      padding-left: 12px;
+      margin-top: 10px;
+    }
+
+    .tag {
+      display: inline-block;
+      margin-top: 4px;
+      font-size: 12px;
+      border-radius: 999px;
+      padding: 4px 8px;
+      background: rgba(138,180,255,0.12);
+      color: #cfe0ff;
+      border: 1px solid rgba(138,180,255,0.25);
+    }
+
+    .footer {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    code {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--line);
+      padding: 2px 6px;
+      border-radius: 8px;
+      color: #f0f5ff;
+    }
+
+    .alert {
+      border: 1px solid rgba(255,211,122,0.28);
+      background: rgba(255,211,122,0.08);
+      color: #ffe7b5;
+      border-radius: 16px;
+      padding: 14px 16px;
+      margin-top: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <p class="kicker">iV7 legal / gaggleVC</p>
+      <h1>Finite HTML Contract Draft</h1>
+      <p class="sub">
+        A conceptual, single-file HTML template for documenting allocation logic, responsibility attribution,
+        and fee-aware reporting in a closed-state business format.
+      </p>
+      <div class="pillrow">
+        <span class="pill">Finite structure</span>
+        <span class="pill">Closed accounting model</span>
+        <span class="pill">DeepMesh attribution</span>
+        <span class="pill">BDS compliance layer</span>
+        <span class="pill">wareZwolf security review</span>
+      </div>
+      <div class="alert">
+        This file is a conceptual draft only. It is not legal advice, tax advice, a payment instruction, or an enforceable contract.
+      </div>
+    </section>
+
+    <div class="grid">
+      <article class="card span-8">
+        <h2>Internal Review Purpose</h2>
+        <p>
+          This page is intended for internal administrative review and tracking of intellectual property,
+          licensing, branding, media, or commercial disputes. The structure is designed to organize
+          reference information in a neutral and auditable format.
+        </p>
+        <ul>
+          <li>Track matter status and responsible contacts.</li>
+          <li>Maintain a structured review record.</li>
+          <li>Separate operational notes from public statements.</li>
+          <li>Store fee and valuation references in one location.</li>
+        </ul>
+
+        <h3>Review scope</h3>
+        <p>
+          This page is informational only and does not create legal obligations, payment instructions,
+          settlement authority, or enforceable rights.
+        </p>
+      </article>
+
+      <article class="card span-4">
+        <h2>Case Summary</h2>
+        <p><strong>Framework:</strong> iV7 Legal</p>
+        <p><strong>Review Type:</strong> Internal Administrative Review</p>
+        <p><strong>Routing:</strong> iV7 DeepMesh</p>
+        <p><strong>Compliance:</strong> BDS</p>
+        <p><strong>Status:</strong> Pending Review</p>
+        <p><strong>Responsible Party:</strong> Shayan Aboutalebi</p>
+      </article>
+
+      <article class="card span-12">
+        <h2>Case Information</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Field</th>
+              <th>Entry</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Case Name</td>
+              <td>Dua Lipa v. Samsung Electronics America, Inc. (reference placeholder)</td>
+            </tr>
+            <tr>
+              <td>Claim Type</td>
+              <td>Alleged unauthorized commercial image use</td>
+            </tr>
+            <tr>
+              <td>Counsel</td>
+              <td>[Insert counsel information]</td>
+            </tr>
+            <tr>
+              <td>Docket / Reference Number</td>
+              <td>[Insert docket or internal tracking number]</td>
+            </tr>
+            <tr>
+              <td>Amount Claimed</td>
+              <td>[Insert claimed amount]</td>
+            </tr>
+            <tr>
+              <td>Associated Fees</td>
+              <td>[Insert administrative, legal, or processing fees]</td>
+            </tr>
+            <tr>
+              <td>Status</td>
+              <td>Open / Under Review</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article class="card span-12">
+        <h2>Administrative Notes</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Layer</th>
+              <th>Description</th>
+              <th>Output</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Origin</td>
+              <td>Captures the source article, filing, or media reference.</td>
+              <td>Reference intake log.</td>
+            </tr>
+            <tr>
+              <td>Review</td>
+              <td>Tracks counsel review and administrative handling.</td>
+              <td>Review record.</td>
+            </tr>
+            <tr>
+              <td>Fees</td>
+              <td>Maintains fee and cost references.</td>
+              <td>Accounting note.</td>
+            </tr>
+            <tr>
+              <td>Attribution</td>
+              <td>Associates operational responsibility and routing.</td>
+              <td>DeepMesh reference.</td>
+            </tr>
+            <tr>
+              <td>Closure</td>
+              <td>Archives completed or resolved matters.</td>
+              <td>Closed-state archive.</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article class="card span-6">
+        <h2>Operational constraints</h2>
+        <ul>
+          <li>No impersonation of institutions or sovereign entities.</li>
+          <li>No unauthorized settlement execution.</li>
+          <li>No payment authorization through this document.</li>
+          <li>No claims of enforceability without legal review.</li>
+        </ul>
+      </article>
+
+      <article class="card span-6">
+        <h2>Review state logic</h2>
+        <p>
+          <span class="tag">Open</span> means the matter is active or pending review.
+        </p>
+        <p>
+          <span class="tag">Under Review</span> means documentation or counsel review is ongoing.
+        </p>
+        <p>
+          <span class="tag">Closed</span> means the review has concluded and the matter is archived.
+        </p>
+      </article>
+
+      <article class="card span-12">
+        <h2>Closing statement</h2>
+        <p>
+          This HTML page functions as a neutral internal review template for organizing case-related information,
+          valuation references, administrative notes, and review status updates.
+        </p>
+        <p class="note">
+          Suggested additions: hearing dates, jurisdiction notes, external references, counsel contacts,
+          and archival attachments.
+        </p>
+      </article>
+    </div>
+
+    <div class="footer">
+      iV7 / gaggleVC / BDS / wareZwolf / DeepMesh — conceptual draft only
+    </div>
+  </div>
+</body>
+</html>
