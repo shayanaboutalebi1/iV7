@@ -86,3 +86,6 @@ For every finished task, iV7 should return:
 - Keep one `request_id` per independent unit of work.
 - Reject incomplete requests at intake rather than guessing missing data.
 - Return evidence with immutable filenames where possible.
+- Use attachment tags such as `0A attached to de_x` to record that artifact `0A` is linked to destination `de_x` in the completion evidence.
+
+- Next-term requests marked `shotgun wedding` must be queued as planning-only items and require explicit consent/approval before any execution steps.
