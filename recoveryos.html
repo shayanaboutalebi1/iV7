@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>recoveryOS — Siri Voice Control</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(135deg, #0b1220 0%, #1a2a4a 100%);
+      color: #dbe7ff;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .container { max-width: 1200px; margin: 0 auto; }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #1f6feb;
+    }
+    h1 { font-size: 2em; display: flex; align-items: center; gap: 12px; }
+    .siri-icon {
+      width: 40px;
+      height: 40px;
+      background: radial-gradient(circle, #ff3b30, #ff2d55);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: white;
+    }
+    .controls {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    button, input, select {
+      padding: 10px 16px;
+      border-radius: 8px;
+      border: none;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    button {
+      background: #1f6feb;
+      color: white;
+    }
+    button:hover {
+      background: #388bfd;
+    }
+    button.danger {
+      background: #da3633;
+    }
+    button.danger:hover {
+      background: #f85149;
+    }
+    button.success {
+      background: #1a7f0f;
+    }
+    button.success:hover {
+      background: #2ea043;
+    }
+    input, select {
+      background: #0f1724;
+      color: #dbe7ff;
+      border: 1px solid #30363d;
+    }
+    input:focus, select:focus {
+      outline: none;
+      border-color: #1f6feb;
+      box-shadow: 0 0 0 3px rgba(31, 111, 235, 0.1);
+    }
+    .mic-button {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #ff3b30, #ff2d55);
+      color: white;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .mic-button:hover {
+      transform: scale(1.1);
+    }
+    .mic-button.listening {
+      animation: pulse 0.6s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(255, 59, 48, 0.7); }
+      70% { box-shadow: 0 0 0 10px rgba(255, 59, 48, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(255, 59, 48, 0); }
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 16px;
+      margin-bottom: 30px;
+    }
+    .card {
+      background: #0f1724;
+      border: 1px solid #30363d;
+      border-radius: 12px;
+      padding: 16px;
+      transition: all 0.2s;
+    }
+    .card:hover {
+      border-color: #1f6feb;
+      box-shadow: 0 4px 12px rgba(31, 111, 235, 0.1);
+    }
+    .card.failed { border-left: 4px solid #ff6b6b; }
+    .card.pending { border-left: 4px solid #ffa500; }
+    .card.completed { border-left: 4px solid #2ea043; }
+    .card.escalated { border-left: 4px solid #d29922; }
+    .card-title { font-weight: 600; font-size: 16px; margin-bottom: 8px; }
+    .card-meta {
+      font-size: 12px;
+      color: #8b949e;
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+    .card-actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+    .card-actions button {
+      flex: 1;
+      min-width: 80px;
+      padding: 6px 10px;
+      font-size: 12px;
+    }
+    .status-badge {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .status-badge.pending { background: rgba(255, 165, 0, 0.2); color: #ffa500; }
+    .status-badge.failed { background: rgba(255, 107, 107, 0.2); color: #ff6b6b; }
+    .status-badge.completed { background: rgba(46, 160, 67, 0.2); color: #2ea043; }
+    .status-badge.escalated { background: rgba(210, 153, 34, 0.2); color: #d29922; }
+    .transcript {
+      background: #0f1724;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      padding: 12px;
+      margin-top: 10px;
+      font-size: 13px;
+      font-style: italic;
+      color: #8b949e;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+    .stat-card {
+      background: #0f1724;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      padding: 16px;
+      text-align: center;
+    }
+    .stat-value {
+      font-size: 28px;
+      font-weight: bold;
+      color: #1f6feb;
+      margin-bottom: 4px;
+    }
+    .stat-label {
+      font-size: 12px;
+      color: #8b949e;
+      text-transform: uppercase;
+    }
+    .filter-group {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .filter-group label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+    .filter-group input[type="checkbox"] {
+      cursor: pointer;
+      width: 16px;
+      height: 16px;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal.show { display: flex; }
+    .modal-content {
+      background: #0f1724;
+      border-radius: 12px;
+      padding: 24px;
+      max-width: 500px;
+      width: 90%;
+      max-height: 80vh;
+      overflow-y: auto;
+    }
+    .modal-header {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      border-bottom: 1px solid #30363d;
+      padding-bottom: 12px;
+    }
+    .modal-body {
+      margin-bottom: 16px;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .modal-footer {
+      display: flex;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #0f1724;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      padding: 16px;
+      z-index: 1001;
+      animation: slideIn 0.3s ease;
+    }
+    @keyframes slideIn {
+      from { transform: translateX(400px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>
+        <div class="siri-icon">🎤</div>
+        recoveryOS — Siri Voice Control
+      </h1>
+      <button id="mic" class="mic-button" title="Click or say: Hey Siri, recover tasks">🎙️</button>
+    </header>
+
+    <div class="controls">
+      <input id="apikey" type="password" placeholder="API Key (optional)" />
+      <select id="apiRoot">
+        <option value="http://localhost:3000/api">Local (localhost:3000)</option>
+        <option value="https://recovery.example.com/api">Production API</option>
+      </select>
+      <button id="refresh">🔄 Refresh</button>
+      <button id="shortcuts" class="success">⚙️ Siri Shortcuts</button>
+      <button id="help">❓ Help</button>
+    </div>
+
+    <div class="stats" id="stats"></div>
+
+    <div class="filter-group">
+      <label><input type="checkbox" class="filter" value="pending" checked /> Pending</label>
+      <label><input type="checkbox" class="filter" value="failed" checked /> Failed</label>
+      <label><input type="checkbox" class="filter" value="in_progress" /> In Progress</label>
+      <label><input type="checkbox" class="filter" value="completed" /> Completed</label>
+      <label><input type="checkbox" class="filter" value="escalated" checked /> Escalated</label>
+    </div>
+
+    <div class="grid" id="tasks"></div>
+  </div>
+
+  <!-- Siri Shortcuts Modal -->
+  <div id="shortcutsModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">Siri Shortcuts Setup</div>
+      <div class="modal-body">
+        <h3 style="margin-top: 0; margin-bottom: 10px;">📱 How to use with Siri:</h3>
+        <p><strong>1. iPhone Shortcuts App:</strong></p>
+        <ul style="margin-left: 20px; margin-bottom: 10px;">
+          <li>Open Shortcuts app</li>
+          <li>Tap "+" to create new shortcut</li>
+          <li>Add action: "Get Contents of URL"</li>
+          <li>URL: <code style="background: #161b22; padding: 2px 4px; border-radius: 3px;">https://yourapi.com/api/tasks?status=pending,failed</code></li>
+          <li>Add action: "Ask for" &rarr; Text with prompt "Retry task ID?"</li>
+          <li>Add action: "Get Contents of URL" (POST)</li>
+          <li>URL: <code style="background: #161b22; padding: 2px 4px; border-radius: 3px;">https://yourapi.com/api/tasks/{provided text}/retry</code></li>
+          <li>Headers: <code style="background: #161b22; padding: 2px 4px; border-radius: 3px;">Authorization: Bearer YOUR_API_KEY</code></li>
+        </ul>
+        <p><strong>2. Voice Command:</strong></p>
+        <ul style="margin-left: 20px; margin-bottom: 10px;">
+          <li>Tap the ⓘ info button on your shortcut</li>
+          <li>Enable "Ask Siri"</li>
+          <li>Set phrase: "Recover tasks" or "Retry last error"</li>
+        </ul>
+        <p><strong>3. Common Voice Commands:</strong></p>
+        <ul style="margin-left: 20px;">
+          <li>"Hey Siri, recover tasks" — lists incomplete tasks</li>
+          <li>"Hey Siri, retry task" — prompts for task ID and retries</li>
+          <li>"Hey Siri, escalate error" — escalates to operator</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button onclick="closeModal('shortcutsModal')">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Help Modal -->
+  <div id="helpModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">recoveryOS Help</div>
+      <div class="modal-body">
+        <h3 style="margin-top: 0;">What is recoveryOS?</h3>
+        <p>recoveryOS is an error recovery orchestration platform that:</p>
+        <ul style="margin-left: 20px; margin-bottom: 15px;">
+          <li><strong>Detects errors</strong> from your systems (errorOS)</li>
+          <li><strong>Categorizes & analyzes</strong> root causes</li>
+          <li><strong>Queues recovery tasks</strong> (errin-parser)</li>
+          <li><strong>Retries intelligently</strong> with exponential backoff</li>
+          <li><strong>Escalates to operators</strong> when needed</li>
+          <li><strong>Integrates with Siri</strong> for voice control</li>
+        </ul>
+        <h3>Task Statuses:</h3>
+        <ul style="margin-left: 20px;">
+          <li><strong>pending</strong> — waiting to be processed</li>
+          <li><strong>in_progress</strong> — worker is attempting recovery</li>
+          <li><strong>completed</strong> — successfully recovered</li>
+          <li><strong>failed</strong> — attempt failed; will retry</li>
+          <li><strong>escalated</strong> — exceeded max attempts; needs operator</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button onclick="closeModal('helpModal')">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const API_ROOT_SELECT = document.getElementById('apiRoot');
+    const API_KEY = document.getElementById('apikey');
+    const REFRESH_BTN = document.getElementById('refresh');
+    const MIC_BTN = document.getElementById('mic');
+    const SHORTCUTS_BTN = document.getElementById('shortcuts');
+    const HELP_BTN = document.getElementById('help');
+    const TASKS_CONTAINER = document.getElementById('tasks');
+    const STATS_CONTAINER = document.getElementById('stats');
+    const FILTERS = document.querySelectorAll('.filter');
+
+    let recognition = null;
+    let isListening = false;
+
+    // Web Speech API for Siri-like voice recognition
+    if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      recognition = new SpeechRecognition();
+      recognition.continuous = false;
+      recognition.interimResults = true;
+      recognition.language = 'en-US';
+
+      recognition.onstart = () => {
+        isListening = true;
+        MIC_BTN.classList.add('listening');
+        showTranscript('Listening...');
+      };
+
+      recognition.onresult = (event) => {
+        let interim_transcript = '';
+        let final_transcript = '';
+        for (let i = event.resultIndex; i < event.results.length; ++i) {
+          const transcript = event.results[i][0].transcript;
+          if (event.results[i].isFinal) {
+            final_transcript += transcript;
+          } else {
+            interim_transcript += transcript;
+          }
+        }
+        if (final_transcript) {
+          handleVoiceCommand(final_transcript);
+        }
+        showTranscript(interim_transcript || final_transcript);
+      };
+
+      recognition.onerror = (event) => {
+        showToast(`Speech recognition error: ${event.error}`, 'error');
+      };
+
+      recognition.onend = () => {
+        isListening = false;
+        MIC_BTN.classList.remove('listening');
+      };
+    }
+
+    MIC_BTN.addEventListener('click', () => {
+      if (recognition) {
+        if (isListening) {
+          recognition.stop();
+        } else {
+          recognition.start();
+        }
+      } else {
+        showToast('Speech recognition not supported in this browser', 'warning');
+      }
+    });
+
+    function handleVoiceCommand(transcript) {
+      const cmd = transcript.toLowerCase().trim();
+      showTranscript(`You said: "${transcript}"`);
+
+      if (cmd.includes('recover') || cmd.includes('refresh') || cmd.includes('list')) {
+        fetchTasks();
+      } else if (cmd.includes('retry')) {
+        showToast('Retrying all failed tasks...', 'info');
+        retryAllFailed();
+      } else if (cmd.includes('escalate')) {
+        showToast('Escalating incomplete tasks...', 'info');
+        escalateAll();
+      } else if (cmd.includes('help')) {
+        openModal('helpModal');
+      } else {
+        showToast(`Command not recognized: "${transcript}"`, 'warning');
+      }
+    }
+
+    function showTranscript(text) {
+      let transcriptEl = document.getElementById('voiceTranscript');
+      if (!transcriptEl) {
+        transcriptEl = document.createElement('div');
+        transcriptEl.id = 'voiceTranscript';
+        transcriptEl.className = 'transcript';
+        document.querySelector('.controls').appendChild(transcriptEl);
+      }
+      transcriptEl.textContent = text;
+    }
+
+    REFRESH_BTN.addEventListener('click', fetchTasks);
+    SHORTCUTS_BTN.addEventListener('click', () => openModal('shortcutsModal'));
+    HELP_BTN.addEventListener('click', () => openModal('helpModal'));
+    FILTERS.forEach(f => f.addEventListener('change', fetchTasks));
+
+    async function getHeaders() {
+      const headers = { 'Content-Type': 'application/json' };
+      if (API_KEY.value) headers['Authorization'] = 'Bearer ' + API_KEY.value;
+      return headers;
+    }
+
+    async function fetchTasks() {
+      try {
+        const apiRoot = API_ROOT_SELECT.value;
+        const headers = await getHeaders();
+        const res = await fetch(apiRoot + '/tasks', { headers });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const tasks = await res.json();
+        renderTasks(tasks);
+        renderStats(tasks);
+      } catch (err) {
+        showToast(`Error fetching tasks: ${err.message}`, 'error');
+      }
+    }
+
+    function getSelectedStatuses() {
+      return Array.from(FILTERS)
+        .filter(f => f.checked)
+        .map(f => f.value);
+    }
+
+    function renderTasks(allTasks) {
+      const selected = getSelectedStatuses();
+      const tasks = allTasks.filter(t => selected.includes(t.status));
+
+      TASKS_CONTAINER.innerHTML = '';
+      if (!tasks.length) {
+        TASKS_CONTAINER.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: #8b949e;">No tasks matching filters.</div>';
+        return;
+      }
+
+      tasks.forEach(t => {
+        const card = document.createElement('div');
+        card.className = 'card ' + t.status;
+        card.innerHTML = `
+          <div class="card-title">${escapeHtml(t.type)} <span class="status-badge ${t.status}">${t.status}</span></div>
+          <div class="card-meta">
+            <div><strong>ID:</strong> ${escapeHtml(t.id.slice(0, 8))}</div>
+            <div><strong>Source:</strong> ${escapeHtml(t.source || 'unknown')}</div>
+            <div><strong>Priority:</strong> ${escapeHtml(t.priority)}</div>
+            <div><strong>Attempts:</strong> ${t.attempts}/${t.max_attempts}</div>
+            <div><strong>Created:</strong> ${new Date(t.created_at).toLocaleString()}</div>
+            ${t.last_error ? `<div><strong>Error:</strong> ${escapeHtml(t.last_error.slice(0, 80))}</div>` : ''}
+          </div>
+          <div class="card-actions">
+            ${t.status === 'failed' || t.status === 'pending' ? `<button onclick="retryTask('${t.id}')" class="success">Retry</button>` : ''}
+            ${t.status !== 'completed' ? `<button onclick="resolveTask('${t.id}')">Resolve</button>` : ''}
+            ${t.status !== 'escalated' ? `<button onclick="escalateTask('${t.id}')" class="danger">Escalate</button>` : ''}
+          </div>
+        `;
+        TASKS_CONTAINER.appendChild(card);
+      });
+    }
+
+    function renderStats(tasks) {
+      const stats = {
+        total: tasks.length,
+        pending: tasks.filter(t => t.status === 'pending').length,
+        failed: tasks.filter(t => t.status === 'failed').length,
+        completed: tasks.filter(t => t.status === 'completed').length,
+        escalated: tasks.filter(t => t.status === 'escalated').length
+      };
+
+      STATS_CONTAINER.innerHTML = `
+        <div class="stat-card"><div class="stat-value">${stats.total}</div><div class="stat-label">Total Tasks</div></div>
+        <div class="stat-card"><div class="stat-value">${stats.pending}</div><div class="stat-label">Pending</div></div>
+        <div class="stat-card"><div class="stat-value">${stats.failed}</div><div class="stat-label">Failed</div></div>
+        <div class="stat-card"><div class="stat-value">${stats.completed}</div><div class="stat-label">Completed</div></div>
+        <div class="stat-card"><div class="stat-value">${stats.escalated}</div><div class="stat-label">Escalated</div></div>
+      `;
+    }
+
+    async function taskAction(id, action) {
+      try {
+        const apiRoot = API_ROOT_SELECT.value;
+        const headers = await getHeaders();
+        const res = await fetch(apiRoot + `/tasks/${id}/${action}`, { method: 'POST', headers });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        showToast(`Task ${action}ed successfully`, 'success');
+        fetchTasks();
+      } catch (err) {
+        showToast(`Error: ${err.message}`, 'error');
+      }
+    }
+
+    window.retryTask = id => taskAction(id, 'retry');
+    window.resolveTask = id => taskAction(id, 'resolve');
+    window.escalateTask = id => taskAction(id, 'escalate');
+
+    async function retryAllFailed() {
+      // This would require a batch endpoint; for now, show instruction
+      showToast('Use the UI or Siri shortcut to retry individual tasks', 'info');
+    }
+
+    async function escalateAll() {
+      showToast('Manual escalation available via task cards', 'info');
+    }
+
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    function openModal(id) {
+      document.getElementById(id).classList.add('show');
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).classList.remove('show');
+    }
+
+    function showToast(message, type = 'info') {
+      const toast = document.createElement('div');
+      toast.className = 'toast';
+      toast.style.borderLeft = type === 'error' ? '4px solid #ff6b6b' : type === 'success' ? '4px solid #2ea043' : '4px solid #1f6feb';
+      toast.textContent = message;
+      document.body.appendChild(toast);
+      setTimeout(() => toast.remove(), 4000);
+    }
+
+    // Initialize
+    fetchTasks();
+    setInterval(fetchTasks, 30000); // refresh every 30 seconds
+  </script>
+</body>
+</html>
