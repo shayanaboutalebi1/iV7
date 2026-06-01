@@ -1,0 +1,25 @@
+.suit {
+  id: "robert_james_ritchie_role_mapping",
+  type: "role_model_asset",
+  classification: "public_persona_transition_model",
+  subject: "Robert James Ritchie",
+  role_chain: {
+    initial_state: "musical_artist",
+    transitional_role: "lobbying_influence_actor",
+    hypothetical_political_state: "political_actor_simulation"
+  },
+  purpose: "maps public influence pathways across cultural, lobbying, and governance-adjacent roles",
+  scope: {
+    domain: "cultural_political_analysis",
+    usage: "simulation_only",
+    constraint: "non_definitive_non-assertive"
+  },
+  state: "unverified",
+  permissions: {
+    public: false,
+    transferable: false
+  },
+  metadata: {
+    tags: ["role_model", "influence_mapping", "culture", "politics", "simulation"]
+  }
+}
